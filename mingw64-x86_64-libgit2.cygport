@@ -2,7 +2,7 @@ CROSS_HOST="x86_64-w64-mingw32"
 inherit cross cmake
 
 NAME="mingw64-x86_64-libgit2"
-VERSION=0.21.0
+VERSION=0.23.4
 RELEASE=1
 CATEGORY="Devel"
 SUMMARY="libgit2 for Win64 toolchain"
@@ -13,6 +13,7 @@ supports C bindings."
 HOMEPAGE="http://libgit2.github.com/"
 SRC_URI="https://github.com/libgit2/libgit2/archive/v${VERSION}/libgit2-v${VERSION}.tar.gz"
 SRC_DIR="libgit2-${VERSION}"
+PATCH_URI="0.23.4-mingw-winhttp.patch"
 
 CYGCMAKE_ARGS="-DTHREADSAFE=ON"
 
